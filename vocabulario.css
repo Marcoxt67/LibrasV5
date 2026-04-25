@@ -12,179 +12,161 @@
     --border-color: #e3e2e9;
 }
 
-/* =======================
-   RESET
-======================= */
-* {
-    box-sizing: border-box;
-}
-
+/* RESET */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: var(--background-color);
+    background: var(--background-color);
     color: var(--foreground-color);
 }
 
-/* =======================
-   NAVBAR
-======================= */
+/* NAVBAR */
 .navbar {
-    background-color: var(--card-color);
+    background: var(--card-color);
     padding: 20px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* evita quebrar feio em telas menores */
     gap: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
 .navbar a {
+    padding: 10px 16px;
+    border-radius: 8px;
     text-decoration: none;
     color: var(--foreground-color);
-    padding: 10px 16px;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 8px;
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .navbar a:hover {
-    background-color: var(--accent-color);
+    background: var(--accent-color);
     color: #fff;
 }
 
 .navbar a.active {
-    background-color: #6B677E;
+    background: #6B677E;
     color: #fff;
 }
 
 /* =======================
-   HERO (TEXTO)
+   HEADER
 ======================= */
-.sobre-hero {
-    display: flex;
-    justify-content: center;
-    padding: 60px 20px 10px;
+.vocab-header {
+    max-width: 900px;
+    margin: 60px auto 20px;
+    padding: 0 20px;
 }
 
-.conteudo {
-    max-width: 700px;
-    width: 100%;
-    text-align: left;
-}
-
-.sobre-hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 36px;
+.vocab-header h1 {
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-.sobre-hero p {
+.vocab-header p {
     color: var(--muted-foreground-color);
+    margin-bottom: 20px;
+}
+
+/* BUSCA */
+.search {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    font-size: 14px;
 }
 
 /* =======================
-   ALFABETO
+   FILTROS
 ======================= */
-.alfabeto {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+.filters {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-/* GRID */
-.alfabeto-grid {
+.filters button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: var(--secondary-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filters button.active {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+}
+
+/* =======================
+   CARDS
+======================= */
+.cards {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* mais equilibrado */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* CARD LETRA */
-.letra {
-    height: 220px;
+/* CARD */
+.card {
     background: var(--card-color);
     border-radius: 12px;
     border: 1px solid var(--border-color);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 32px;
-    font-family: 'Space Grotesk', sans-serif;
-
-    cursor: pointer; /* importante pra UX */
+    overflow: hidden;
     transition: 0.3s;
 }
 
-.letra:hover {
+.card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-color);
 }
 
-/* =======================
-   MODAL
-======================= */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-
+/* PARTE SUPERIOR */
+.card-top {
+    height: 140px;
+    background: #EDEAF8;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    font-size: 40px;
+    color: #BBA9E6;
+    font-weight: 600;
+}
+
+/* CORPO */
+.card-body {
+    padding: 15px;
+}
+
+/* HEADER DO CARD */
+.card-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.modal-content {
-    background: white;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.modal iframe {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.modal-info h2 {
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-.modal-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.btn {
-    padding: 10px 15px;
-    border: none;
+.card-header span {
+    background: var(--secondary-color);
+    padding: 3px 8px;
     border-radius: 8px;
-    background: var(--primary-color);
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
+    font-size: 12px;
 }
 
-.btn:hover {
-    opacity: 0.9;
+/* TEXTO */
+.card-body p {
+    font-size: 13px;
+    color: var(--muted-foreground-color);
 }
+
+
 
 /* =======================
    FOOTER
@@ -195,6 +177,7 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
+/* CONTAINER */
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -203,6 +186,7 @@ body {
     gap: 40px;
 }
 
+/* BRAND */
 .footer-brand h3 {
     font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 10px;
@@ -213,6 +197,7 @@ body {
     font-size: 14px;
 }
 
+/* LINKS */
 .footer-links {
     display: flex;
     flex-direction: column;
@@ -233,6 +218,7 @@ body {
     color: var(--primary-color);
 }
 
+/* COMUNIDADE */
 .footer-community h4 {
     margin-bottom: 10px;
 }
@@ -253,6 +239,7 @@ body {
     text-decoration: underline;
 }
 
+/* PARTE DE BAIXO */
 .footer-bottom {
     margin-top: 40px;
     padding-top: 20px;
@@ -264,15 +251,19 @@ body {
     color: var(--muted-foreground-color);
 }
 
-/* =======================
-   ANIMAÇÃO
-======================= */
+
+
+
+
+
+/* ANIMAÇÃO GLOBAL */
 .reveal {
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+/* estado ativo */
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -282,18 +273,19 @@ body {
    RESPONSIVO
 ======================= */
 @media (max-width: 768px) {
-    .sobre-hero h1 {
-        font-size: 28px;
+    .hero {
+        padding: 40px 20px;
     }
 
-    .letra {
-        height: 180px;
-        font-size: 26px;
+    .hero h1 {
+        font-size: 32px;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        gap: 20px;
     }
 }

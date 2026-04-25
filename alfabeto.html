@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="alfabeto.css">
 
@@ -15,98 +18,132 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <a href="index.html">🏠 Início</a>
-            <a href="sobre.html">ℹ️ Sobre</a>
-            <a href="alfabeto.html" class="active">📚 Alfabeto</a>
-            <a href="#">🤟 Sinais</a>
-            <a href="#">📚 Vocabulário</a>
-            <a href="#">👥 Participar</a>
-            <a href="#">🎯 Quiz</a>
-            <a href="#">💬 Comunidade</a>
-        </nav>
-    </header>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <a href="index.html">🏠 Início</a>
+        <a href="sobre.html">ℹ️ Sobre</a>
+        <a href="alfabeto.html" class="active">📚 Alfabeto</a>
+        <a href="#sinais">🤟 Sinais</a>
+        <a href="vocabulario.html">📚 Vocabulário</a>
+        <a href="#">👥 Participar</a>
+        <a href="#">🎯 Quiz</a>
+        <a href="#">💬 Comunidade</a>
+    </nav>
+</header>
 
-    <!-- CONTEÚDO -->
-    <main>
+<main>
 
-        <!-- HERO -->
-        <section class="sobre-hero reveal">
-            <div class="conteudo">
-                <h1>Alfabeto em Libras</h1>
-                <p>
-                    O alfabeto em Libras é a base da comunicação.
-                    Cada letra possui um sinal correspondente.
-                </p>
-            </div>
-        </section>
-
-        <!-- GRID -->
-        <section class="alfabeto">
-            <div class="alfabeto-grid">
-                
-                <div class="letra" data-letra="A" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">A</div>
-                <div class="letra" data-letra="B" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">B</div>
-                <div class="letra" data-letra="C" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">C</div>
-                <div class="letra" data-letra="D" data-video="https://www.youtube.com/embed/5O0Ou6UBMx4">D</div>
-                <div class="letra" data-letra="E" data-video="https://www.youtube.com/embed/bqNHODeZx5Q">E</div>
-
-                <div class="letra" data-letra="F" data-video="https://www.youtube.com/embed/zvzEogufOGY">F</div>
-                <div class="letra" data-letra="G" data-video="https://www.youtube.com/embed/LJTb3pXnuRU">G</div>
-                <div class="letra" data-letra="H" data-video="https://www.youtube.com/embed/IbBAF9EuTxo">H</div>
-                <div class="letra" data-letra="I" data-video="https://www.youtube.com/embed/Nvxj_eiMeHc">I</div>
-                <div class="letra" data-letra="J" data-video="https://www.youtube.com/embed/pHqHr1-WcDY">J</div>
-
-                <div class="letra" data-letra="K" data-video="https://www.youtube.com/embed/UTHIZn0Q-WI">K</div>
-                <div class="letra" data-letra="L" data-video="https://www.youtube.com/embed/OwTvsL3Reus">L</div>
-                <div class="letra" data-letra="M" data-video="https://www.youtube.com/embed/I0gjvWILsZ4">M</div>
-                <div class="letra" data-letra="N" data-video="https://www.youtube.com/embed/_aZO3VAA4zw">N</div>
-                <div class="letra" data-letra="O" data-video="https://www.youtube.com/embed/R5vjOCFQH74">O</div>
-
-                <div class="letra" data-letra="P" data-video="https://www.youtube.com/embed/mfjfmB_6MOU">P</div>
-                <div class="letra" data-letra="Q" data-video="https://www.youtube.com/embed/4kHhMbo158U">Q</div>
-                <div class="letra" data-letra="R" data-video="https://www.youtube.com/embed/ZGO_j2WGxfc">R</div>
-                <div class="letra" data-letra="S" data-video="https://www.youtube.com/embed/JoJj9s6pV-c">S</div>
-                <div class="letra" data-letra="T" data-video="https://www.youtube.com/embed/Cz9BB_1eBIs">T</div>
-
-                <div class="letra" data-letra="U" data-video="https://www.youtube.com/embed/EZo55lzqFhU">U</div>
-                <div class="letra" data-letra="V" data-video="https://www.youtube.com/embed/Nz_-ZfkOmsQ">V</div>
-                <div class="letra" data-letra="W" data-video="https://www.youtube.com/embed/KRwuJ-57ylI">W</div>
-                <div class="letra" data-letra="X" data-video="https://www.youtube.com/embed/kWF5l8Q2ek8">X</div>
-                <div class="letra" data-letra="Y" data-video="https://www.youtube.com/embed/wra6NQZ9mv8">Y</div>
-
-                <div class="letra" data-letra="Z" data-video="">Z</div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- MODAL -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-
-            <span class="close">&times;</span>
-
-            <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
-
-            <div class="modal-info">
-                <h2 id="titulo"></h2>
-
-                <p><strong>Alfabeto</strong></p>
-
-                <p id="descricao"></p>
-
-                <div class="modal-actions">
-                    <button class="btn">⭐ Favoritar</button>
-                    <button class="btn">✔ Marcar como aprendido</button>
-                </div>
-            </div>
-
+    <!-- HERO -->
+    <section class="sobre-hero reveal">
+        <div class="conteudo">
+            <h1>Alfabeto em Libras</h1>
+            <p>
+                O alfabeto em Libras é a base da comunicação.
+                Cada letra possui um sinal correspondente.
+            </p>
         </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="alfabeto">
+        <div class="alfabeto-grid">
+            <!-- EXEMPLOS -->
+            <div class="letra" data-letra="A" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">A</div>
+            <div class="letra" data-letra="B" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">B</div>
+            <div class="letra" data-letra="C" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">C</div>
+            <div class="letra" data-letra="D" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">D</div>
+            <div class="letra" data-letra="E" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">E</div>
+            <div class="letra" data-letra="F" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">F</div>
+            <div class="letra" data-letra="G" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">G</div>
+            <div class="letra" data-letra="H" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">H</div>
+            <div class="letra" data-letra="I" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">I</div>
+            <div class="letra" data-letra="J" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">J</div>
+            <div class="letra" data-letra="K" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">K</div>
+            <div class="letra" data-letra="L" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">L</div>
+            <div class="letra" data-letra="M" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">M</div>
+            <div class="letra" data-letra="N" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">N</div>
+            <div class="letra" data-letra="O" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">O</div>
+            <div class="letra" data-letra="P" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">P</div>
+            <div class="letra" data-letra="Q" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">Q</div>
+            <div class="letra" data-letra="R" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">R</div>
+            <div class="letra" data-letra="S" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">S</div>
+            <div class="letra" data-letra="T" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">T</div>
+            <div class="letra" data-letra="U" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">U</div>
+            <div class="letra" data-letra="V" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">V</div>
+            <div class="letra" data-letra="W" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">W</div>
+            <div class="letra" data-letra="X" data-video="https://www.youtube.com/embed/1q7vd8eRiaA">X</div>
+            <div class="letra" data-letra="Y" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">Y</div>
+            <div class="letra" data-letra="Z" data-video="https://www.youtube.com/embed/xAM1L3j9DsA">Z</div>
+        
+            </div>
+    </section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
+
+        <div class="modal-info">
+            <h2 id="titulo"></h2>
+
+            <p><strong>Alfabeto</strong></p>
+
+            <p id="descricao"></p>
+
+            <div class="modal-actions">
+                <button class="btn">⭐ Favoritar</button>
+                <button class="btn">✔ Marcar como aprendido</button>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>🟣 LibrasApp</h3>
+            <p>
+                Plataforma educacional dedicada ao ensino da Língua Brasileira de Sinais.
+                Promovendo inclusão e acessibilidade para todos.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="#">Sobre Libras</a>
+            <a href="#">Sinais Básicos</a>
+            <a href="#">Prática</a>
+            <a href="#">Alfabeto</a>
+            <a href="#">Vocabulário</a>
+            <a href="#">Quiz</a>
+        </div>
+
+        <div class="footer-community">
+            <h4>Comunidade</h4>
+            <p>
+                Junte-se à nossa comunidade e aprenda junto com outros estudantes de Libras.
+            </p>
+            <a href="#" class="community-link">Acessar Comunidade →</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Feito com ❤️ para promover inclusão</p>
+        <p>© 2026 LibrasApp. Todos os direitos reservados.</p>
+    </div>
+
+</footer>
 
 </body>
 </html>
