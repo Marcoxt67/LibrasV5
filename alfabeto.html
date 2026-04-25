@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="alfabeto.css">
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+
+    <title>Alfabeto</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html">🏠 Início</a>
+            <a href="sobre.html">ℹ️ Sobre</a>
+            <a href="alfabeto.html" class="active">📚 Alfabeto</a>
+            <a href="#">🤟 Sinais</a>
+            <a href="#">📚 Vocabulário</a>
+            <a href="#">👥 Participar</a>
+            <a href="#">🎯 Quiz</a>
+            <a href="#">💬 Comunidade</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <!-- HERO -->
+        <section class="sobre-hero reveal">
+            <div class="conteudo">
+                <h1>Alfabeto em Libras</h1>
+                <p>
+                    O alfabeto em Libras é a base da comunicação.
+                    Cada letra possui um sinal correspondente.
+                </p>
+            </div>
+        </section>
+
+        <!-- GRID -->
+        <section class="alfabeto">
+            <div class="alfabeto-grid">
+
+                <div class="letra" data-letra="A" data-video="https://www.youtube.com/embed/U1r7oD6EwG0">A</div>
+                <div class="letra" data-letra="B" data-video="https://www.youtube.com/embed/VIDEO_B">B</div>
+                <div class="letra" data-letra="C" data-video="https://www.youtube.com/embed/VIDEO_C">C</div>
+                <div class="letra" data-letra="D" data-video="https://www.youtube.com/embed/VIDEO_D">D</div>
+                <div class="letra" data-letra="E" data-video="https://www.youtube.com/embed/VIDEO_E">E</div>
+
+                <div class="letra" data-letra="F" data-video="#">F</div>
+                <div class="letra" data-letra="G" data-video="#">G</div>
+                <div class="letra" data-letra="H" data-video="#">H</div>
+                <div class="letra" data-letra="I" data-video="#">I</div>
+                <div class="letra" data-letra="J" data-video="#">J</div>
+
+                <div class="letra" data-letra="K" data-video="#">K</div>
+                <div class="letra" data-letra="L" data-video="#">L</div>
+                <div class="letra" data-letra="M" data-video="#">M</div>
+                <div class="letra" data-letra="N" data-video="#">N</div>
+                <div class="letra" data-letra="O" data-video="#">O</div>
+
+                <div class="letra" data-letra="P" data-video="#">P</div>
+                <div class="letra" data-letra="Q" data-video="#">Q</div>
+                <div class="letra" data-letra="R" data-video="#">R</div>
+                <div class="letra" data-letra="S" data-video="#">S</div>
+                <div class="letra" data-letra="T" data-video="#">T</div>
+
+                <div class="letra" data-letra="U" data-video="#">U</div>
+                <div class="letra" data-letra="V" data-video="#">V</div>
+                <div class="letra" data-letra="W" data-video="#">W</div>
+                <div class="letra" data-letra="X" data-video="#">X</div>
+                <div class="letra" data-letra="Y" data-video="#">Y</div>
+                <div class="letra" data-letra="Z" data-video="#">Z</div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
+
+            <div class="modal-info">
+                <h2 id="titulo"></h2>
+
+                <p><strong>Alfabeto</strong></p>
+
+                <p id="descricao"></p>
+
+                <div class="modal-actions">
+                    <button class="btn">⭐ Favoritar</button>
+                    <button class="btn">✔ Marcar como aprendido</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
