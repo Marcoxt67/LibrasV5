@@ -15,6 +15,20 @@ if (elements.length > 0) {
     elements.forEach(el => observer.observe(el));
 }
 
+
+/* =========================
+   NAVBAR MOBILE (HAMBURGUER)
+========================= */
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links"); // 👈 corrigido
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
+
+
 /* =========================
    MODAL ALFABETO
 ========================= */
@@ -35,25 +49,25 @@ const dados = {
 };
 
 /* ABRIR MODAL */
-letras.forEach(letra => {
-    letra.addEventListener("click", () => {
+if (letras.length > 0) {
+    letras.forEach(letra => {
+        letra.addEventListener("click", () => {
 
-        const letraSelecionada = letra.dataset.letra;
-        const videoLink = letra.dataset.video;
+            const letraSelecionada = letra.dataset.letra;
+            const videoLink = letra.dataset.video;
 
-        // 🚫 evita abrir modal sem vídeo
-        if (!videoLink || videoLink === "#") return;
+            if (!videoLink || videoLink === "#") return;
 
-        titulo.textContent = letraSelecionada;
+            titulo.textContent = letraSelecionada;
 
-        // 👇 quebra de linha funcionando
-        const texto = dados[letraSelecionada] || "Descrição não disponível.";
-        descricao.innerHTML = texto.replace(/\n/g, "<br>");
+            const texto = dados[letraSelecionada] || "Descrição não disponível.";
+            descricao.innerHTML = texto.replace(/\n/g, "<br>");
 
-        video.src = videoLink;
-        modal.style.display = "flex";
+            video.src = videoLink;
+            modal.style.display = "flex";
+        });
     });
-});
+}
 
 /* FECHAR BOTÃO */
 if (closeBtn) {
@@ -67,7 +81,7 @@ window.addEventListener("click", (e) => {
     }
 });
 
-/* ESC PARA FECHAR (nível profissional) */
+/* ESC PARA FECHAR */
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         fecharModal();
@@ -76,6 +90,8 @@ window.addEventListener("keydown", (e) => {
 
 /* FUNÇÃO CENTRAL */
 function fecharModal() {
-    modal.style.display = "none";
-    video.src = "";
+    if (modal && video) {
+        modal.style.display = "none";
+        video.src = "";
+    }
 }

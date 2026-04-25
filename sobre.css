@@ -56,10 +56,21 @@ body {
     align-items: center;
 }
 
-/* LINKS */
 .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--card-color);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    z-index: 9999; /* 👈 ESSENCIAL */
+}
+
+.nav-links.active {
     display: flex;
-    gap: 12px;
 }
 
 /* BOTÃO HAMBURGUER */
