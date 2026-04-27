@@ -31,58 +31,51 @@ body {
 ======================= */
 .navbar {
     background-color: var(--card-color);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* evita quebrar feio em telas menores */
-    gap: 12px;
+    padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.navbar a {
-    text-decoration: none;
-    color: var(--foreground-color);
-    padding: 10px 16px;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 8px;
-    transition: 0.25s ease;
-}
-
-.navbar a:hover {
-    background-color: var(--accent-color);
-    color: #fff;
-}
-
-.navbar a.active {
-    background-color: #6B677E;
-    color: #fff;
-}
-
-/* CONTAINER NAV */
+/* CONTAINER */
 .nav-container {
-    width: 100%;
     max-width: 1100px;
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: relative; /* 🔥 ESSENCIAL */
 }
 
+/* LOGO */
+.logo {
+    font-weight: 600;
+}
+
+/* LINKS DESKTOP */
 .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--card-color);
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    z-index: 9999; /* 👈 ESSENCIAL */
+    display: flex;
+    gap: 12px;
 }
 
-.nav-links.active {
-    display: flex;
+/* LINKS */
+.nav-links a {
+    text-decoration: none;
+    color: var(--foreground-color);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.nav-links a.active {
+    background-color: #6B677E;
+    color: white;
 }
 
 /* BOTÃO HAMBURGUER */
@@ -94,7 +87,9 @@ body {
     cursor: pointer;
 }
 
-/* MOBILE */
+/* =======================
+   MOBILE
+======================= */
 @media (max-width: 768px) {
 
     .menu-toggle {
@@ -103,18 +98,20 @@ body {
 
     .nav-links {
         position: absolute;
-        top: 70px;
-        right: 20px;
+        top: 60px;
+        right: 0;
+
+        width: 220px;
+        flex-direction: column;
 
         background: var(--card-color);
-        flex-direction: column;
-        width: 200px;
-
         padding: 15px;
-        border-radius: 10px;
+        border-radius: 12px;
+
         box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 
         display: none;
+        z-index: 9999;
     }
 
     .nav-links.active {
@@ -122,7 +119,7 @@ body {
     }
 
     .nav-links a {
-        padding: 10px;
+        padding: 12px;
     }
 }
 
