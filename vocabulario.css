@@ -81,6 +81,47 @@ body {
     cursor: pointer;
 }
 
+
+/* =======================
+   REVEAL MODERNO
+======================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.6s ease;
+    will-change: transform, opacity;
+}
+
+/* ATIVO */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* VARIAÇÕES (opcional, mas fica bonito) */
+.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal-right {
+    transform: translateX(40px);
+}
+
+.reveal-zoom {
+    transform: scale(0.9);
+}
+
+/* quando ativa */
+.reveal-left.active,
+.reveal-right.active,
+.reveal-zoom.active {
+    transform: translateX(0) scale(1);
+}
+
+
+
+
+
 /* =======================
    MOBILE
 ======================= */

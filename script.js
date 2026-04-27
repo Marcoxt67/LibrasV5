@@ -4,13 +4,14 @@
 const elements = document.querySelectorAll('.reveal');
 
 if (elements.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+                observer.unobserve(entry.target); // evita repetir
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     elements.forEach(el => observer.observe(el));
 }
@@ -20,11 +21,20 @@ if (elements.length > 0) {
    NAVBAR MOBILE (HAMBURGUER)
 ========================= */
 const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links"); // 👈 corrigido
+const navLinks = document.querySelector(".nav-links");
 
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
+
+    menuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
         navLinks.classList.toggle("active");
+    });
+
+    // fecha clicando fora
+    document.addEventListener("click", (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove("active");
+        }
     });
 }
 
@@ -49,7 +59,7 @@ const dados = {
 };
 
 /* ABRIR MODAL */
-if (letras.length > 0) {
+if (letras.length > 0 && modal && video) {
     letras.forEach(letra => {
         letra.addEventListener("click", () => {
 
@@ -69,26 +79,23 @@ if (letras.length > 0) {
     });
 }
 
-/* FECHAR BOTÃO */
+/* FECHAR */
 if (closeBtn) {
     closeBtn.addEventListener("click", fecharModal);
 }
 
-/* FECHAR CLICANDO FORA */
 window.addEventListener("click", (e) => {
-    if (e.target === modal) {
+    if (modal && e.target === modal) {
         fecharModal();
     }
 });
 
-/* ESC PARA FECHAR */
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         fecharModal();
     }
 });
 
-/* FUNÇÃO CENTRAL */
 function fecharModal() {
     if (modal && video) {
         modal.style.display = "none";

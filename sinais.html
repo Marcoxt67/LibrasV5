@@ -25,13 +25,13 @@
 
             <div class="logo">🟣 LibrasApp</div>
 
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <button class="menu-toggle">☰</button>
 
-            <div class="nav-links" id="nav-links">
+            <div class="nav-links">
                 <a href="index.html">🏠 Início</a>
                 <a href="sobre.html">ℹ️ Sobre</a>
                 <a href="alfabeto.html">📚 Alfabeto</a>
-                <a href="sinais.html">🤟 Sinais</a>
+                <a href="sinais.html" class="active">🤟 Sinais</a>
                 <a href="vocabulario.html">📖 Vocabulário</a>
                 <a href="pratica.html">🎯 Prática</a>
                 <a href="quiz.html">🧠 Quiz</a>
@@ -45,20 +45,19 @@
 <main>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero reveal">
         <div class="hero-content">
             <h1>Sinais em Libras</h1>
             <p>
                 Aprenda sinais práticos usados no dia a dia. Explore categorias e desenvolva sua comunicação em Libras.
             </p>
 
-            <!-- BUSCA -->
             <input type="text" placeholder="Buscar sinal..." class="search">
         </div>
     </section>
 
     <!-- FILTROS -->
-    <section class="filtros">
+    <section class="filtros reveal">
         <button class="filtro active">Todos</button>
         <button class="filtro">Cumprimentos</button>
         <button class="filtro">Emoções</button>
@@ -71,8 +70,7 @@
     <section class="sinais">
         <div class="sinais-grid">
 
-            <!-- CARD -->
-            <div class="card">
+            <div class="card reveal reveal-left">
                 <div class="card-top">👋</div>
                 <div class="card-body">
                     <h3>Olá</h3>
@@ -81,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal reveal-right">
                 <div class="card-top">🙏</div>
                 <div class="card-body">
                     <h3>Obrigado</h3>
@@ -90,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal reveal-left">
                 <div class="card-top">❤️</div>
                 <div class="card-body">
                     <h3>Amor</h3>
@@ -99,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal reveal-right">
                 <div class="card-top">😡</div>
                 <div class="card-body">
                     <h3>Raiva</h3>
@@ -111,50 +109,47 @@
         </div>
     </section>
 
-    
-        <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <!-- LOGO / DESCRIÇÃO -->
-            <div class="footer-brand">
-                <h3>🟣 LibrasApp</h3>
-                <p>
-                    Plataforma educacional dedicada ao ensino da Língua Brasileira de Sinais.
-                    Promovendo inclusão e acessibilidade para todos.
-                </p>
-            </div>
-
-            <!-- NAVEGAÇÃO -->
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <a href="#">Sobre Libras</a>
-                <a href="#">Sinais Básicos</a>
-                <a href="#">Prática</a>
-                <a href="#">Alfabeto</a>
-                <a href="#">Vocabulário</a>
-                <a href="#">Quiz</a>
-            </div>
-
-            <!-- COMUNIDADE -->
-            <div class="footer-community">
-                <h4>Comunidade</h4>
-                <p>
-                    Junte-se à nossa comunidade e aprenda junto com outros estudantes de Libras.
-                </p>
-                <a href="#" class="community-link">Acessar Comunidade →</a>
-            </div>
-
-        </div>
-
-        <!-- LINHA -->
-        <div class="footer-bottom">
-            <p>Feito com ❤️ para promover inclusão</p>
-            <p>© 2026 LibrasApp. Todos os direitos reservados.</p>
-        </div>
-
 </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>🟣 LibrasApp</h3>
+            <p>
+                Plataforma educacional dedicada ao ensino da Língua Brasileira de Sinais.
+                Promovendo inclusão e acessibilidade para todos.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="#">Sobre Libras</a>
+            <a href="#">Sinais Básicos</a>
+            <a href="#">Prática</a>
+            <a href="#">Alfabeto</a>
+            <a href="#">Vocabulário</a>
+            <a href="#">Quiz</a>
+        </div>
+
+        <div class="footer-community">
+            <h4>Comunidade</h4>
+            <p>
+                Junte-se à nossa comunidade e aprenda junto com outros estudantes de Libras.
+            </p>
+            <a href="#" class="community-link">Acessar Comunidade →</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Feito com ❤️ para promover inclusão</p>
+        <p>© 2026 LibrasApp. Todos os direitos reservados.</p>
+    </div>
+
+</footer>
 
 </body>
 </html>

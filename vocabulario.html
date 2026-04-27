@@ -18,21 +18,20 @@
 
 <body>
 
-<!-- NAVBAR -->
 <header>
     <nav class="navbar">
         <div class="nav-container">
 
             <div class="logo">🟣 LibrasApp</div>
 
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <button class="menu-toggle">☰</button>
 
-            <div class="nav-links" id="nav-links">
+            <div class="nav-links">
                 <a href="index.html">🏠 Início</a>
                 <a href="sobre.html">ℹ️ Sobre</a>
                 <a href="alfabeto.html">📚 Alfabeto</a>
                 <a href="sinais.html">🤟 Sinais</a>
-                <a href="vocabulario.html">📖 Vocabulário</a>
+                <a href="vocabulario.html" class="active">📖 Vocabulário</a>
                 <a href="pratica.html">🎯 Prática</a>
                 <a href="quiz.html">🧠 Quiz</a>
                 <a href="#">💬 Comunidade</a>
@@ -40,21 +39,18 @@
 
         </div>
     </nav>
-
 </header>
 
 <main>
 
-    <!-- HEADER -->
-    <section class="vocab-header">
+    <section class="vocab-header reveal">
         <h1>Vocabulário</h1>
-        <p>Dicionário completo de sinais em Libras. Pesquise por palavra ou navegue pelas categorias.</p>
+        <p>Dicionário completo de sinais em Libras.</p>
 
         <input type="text" placeholder="🔍 Buscar sinal..." class="search">
     </section>
 
-    <!-- FILTROS -->
-    <section class="filters">
+    <section class="filters reveal">
         <button class="active">Todos</button>
         <button>Emoções</button>
         <button>Objetos</button>
@@ -63,97 +59,77 @@
         <button>❤️ Favoritos</button>
     </section>
 
-    <!-- CARDS -->
     <section class="cards">
 
-        <div class="card">
+        <div class="card reveal reveal-left">
             <div class="card-top">F</div>
             <div class="card-body">
-                <div class="card-header">
-                    <h3>Feliz</h3>
-                    <span>Inic.</span>
-                </div>
+                <h3>Feliz</h3>
                 <p>Mãos abertas sobem e descem no peito...</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-right">
             <div class="card-top">T</div>
             <div class="card-body">
-                <div class="card-header">
-                    <h3>Triste</h3>
-                    <span>Inic.</span>
-                </div>
+                <h3>Triste</h3>
                 <p>Mão aberta desce pelo rosto...</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-left">
             <div class="card-top">A</div>
             <div class="card-body">
-                <div class="card-header">
-                    <h3>Amor</h3>
-                    <span>Inic.</span>
-                </div>
+                <h3>Amor</h3>
                 <p>Braços cruzados sobre o peito...</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-right">
             <div class="card-top">R</div>
             <div class="card-body">
-                <div class="card-header">
-                    <h3>Raiva</h3>
-                    <span>Inter.</span>
-                </div>
+                <h3>Raiva</h3>
                 <p>Mãos em garra na frente do corpo...</p>
             </div>
         </div>
 
     </section>
 
-        <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <!-- LOGO / DESCRIÇÃO -->
-            <div class="footer-brand">
-                <h3>🟣 LibrasApp</h3>
-                <p>
-                    Plataforma educacional dedicada ao ensino da Língua Brasileira de Sinais.
-                    Promovendo inclusão e acessibilidade para todos.
-                </p>
-            </div>
-
-            <!-- NAVEGAÇÃO -->
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <a href="#">Sobre Libras</a>
-                <a href="#">Sinais Básicos</a>
-                <a href="#">Prática</a>
-                <a href="#">Alfabeto</a>
-                <a href="#">Vocabulário</a>
-                <a href="#">Quiz</a>
-            </div>
-
-            <!-- COMUNIDADE -->
-            <div class="footer-community">
-                <h4>Comunidade</h4>
-                <p>
-                    Junte-se à nossa comunidade e aprenda junto com outros estudantes de Libras.
-                </p>
-                <a href="#" class="community-link">Acessar Comunidade →</a>
-            </div>
-
-        </div>
-
-        <!-- LINHA -->
-        <div class="footer-bottom">
-            <p>Feito com ❤️ para promover inclusão</p>
-            <p>© 2026 LibrasApp. Todos os direitos reservados.</p>
-        </div>
 </main>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>🟣 LibrasApp</h3>
+            <p>
+                Plataforma educacional dedicada ao ensino da Língua Brasileira de Sinais.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="#">Sobre</a>
+            <a href="#">Sinais</a>
+            <a href="#">Prática</a>
+            <a href="#">Alfabeto</a>
+        </div>
+
+        <div class="footer-community">
+            <h4>Comunidade</h4>
+            <p>Aprenda com outros estudantes.</p>
+            <a href="#" class="community-link">Entrar →</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Feito com ❤️</p>
+        <p>© 2026</p>
+    </div>
+
+</footer>
 
 </body>
 </html>
