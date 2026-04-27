@@ -49,7 +49,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    position: relative; /* 🔥 ESSENCIAL */
+    position: relative;
 }
 
 /* LOGO */
@@ -57,27 +57,48 @@ body {
     font-weight: 600;
 }
 
-/* LINKS DESKTOP */
+/* LINKS */
 .nav-links {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
 }
 
-/* LINKS */
 .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     text-decoration: none;
     color: var(--foreground-color);
     padding: 10px 14px;
     border-radius: 8px;
     transition: 0.25s ease;
     font-size: 14px;
+    line-height: 1;
 }
 
+/* ÍCONES */
+.nav-links a img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: 0.2s ease;
+}
+
+/* HOVER */
 .nav-links a:hover {
     background-color: var(--accent-color);
     color: white;
 }
 
+.nav-links a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* LINK ATIVO */
 .nav-links a.active {
     background-color: #6B677E;
     color: white;
